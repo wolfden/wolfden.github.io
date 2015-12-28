@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Sabayon Forensics</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div id="wrap">
+<div id="header">
+<h1>Sabayon Forensics</h1>
+</div>
+<div id="container">
+<div id="sidebar">
+<div class="urbangreymenu">
+<h3 class="headerbar">Menu</h3>
+<ul>
+<li><a href="index.html">Main Page</a></li>
+<li><a href="iso.html">Obtaining ISO Image</a></li>
+<li><a href="start.html">Getting Started</a></li>
+
+</ul>
+</div>
+</div>
+<div id="main">
+
+<h1>Getting Started</h1>
+<p>First thing to decide, burn the iso to a dvd or use <a href="https://rufus.akeo.ie/">rufus</a> to make a bootable flash drive. I highly recommend a 4gb flash drive formated to fat32 and using rufus as it provides great performance compared to the slower dvd performance.
+</p>
+<p>Linux can use the DD command: <b>dd bs=4M if=/path/to/iso of=/dev/sdx && sync</b>  Use the command <b>blkid</b> to find your sdx to use.  You will more than likely need to be root or sudo for both commands.
+</p>
+<p>MD5 Sum One should always check the md5sum of the ISO file to verify that the file you downloaded is a legit working copy. Download the iso file and the md5 file together in the same directory/folder. For linux, run the command in the directory you downloaded the files to: <br><b>md5sum -C Sabayon_Linux_Gforensic_DAILY_x86.iso.md5</b> (substitute name of course)
+</p>
+<p>For Windows you can download a free md5sum checker like <a href="http://www.winmd5.com/">WinMD5Free</a> and use that. Some software burning programs have a built in md5sum checker.
+</p>
+<h1>Booting</h1>
+<p>With most newer computers, it's simple to select a boot device. Generally you can insert the dvd or the flash drive, as the computer is rebooting or starting up, hit the F12 key to enter boot menu. This is generally done right away when the computer is first rebooting or starting up. You should even see a message that even tells you what key to hit. It might not be F12, but watch the screen and it should say something like, for boot menu push F12(may vary) or to enter setup push F2 or sometimes del key.
+</p>
+<p>On older computers, you may have to push F2 (or different key) to enter setup and enable boot or change your boot order. Check your manual to see how to do that, it's generally pretty simple. Just becareful when making bios changes. You can see in this <a href="http://www.youtube.com/watch?v=63afwQiC--0&feature=related">video at the 13:00 mark</a> of them changing the bios settings. Youtube has good videos on burning iso images, booting a flash drive, so don't be afraid to search youtube for a video.
+</p>
+<p>For the sake of simplicity on my newer computer. I plug in my flash drive, restart, as soon as I see the boot splash, I hit F12 and a box comes up to let me select my USB flash drive. It's just that simple, nothing to change in bios or anything.
+</p>
+<p>When it all goes right you should end up with:(Click Image for larger view)
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/boot.jpg"><img src="/img/boot.jpg" width="400"></a></p>
+<p>Now all you have to do is hit enter and soon you will be at a fully loaded desktop. (Click Image for larger view)</p>
+<p align="center"><a href="http://wolfden.github.io/img/desktop.jpg"><img src="/img/desktop.jpg" width="400"></a>
+</p>
+</div>
+</div>
+</body>
+</html>
