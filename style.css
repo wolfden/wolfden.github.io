@@ -3,7 +3,7 @@ width: 190px; /*width of menu*/
 }
 
 .urbangreymenu .headerbar{
-font: bold 13px Verdana;
+font: bold 16px serif;
 color: white;
 background: #606060 url(media/arrowstop.gif) no-repeat 8px 6px; /*last 2 values are the x and y coordinates of bullet image*/
 margin-bottom: 0; /*bottom spacing between header and rest of content*/
@@ -23,7 +23,7 @@ padding-bottom: 2px; /*bottom spacing between menu items*/
 }
 
 .urbangreymenu ul li a{
-font: normal 12px Verdana;
+font: normal 14px serif;
 color: black;
 background: #E9E9E9;
 display: block;
@@ -74,6 +74,7 @@ background:#E9E9E9;
 }
 
 #main {
+font: normal 16px serif;
 float:right;
 width:976px;
 padding:10px;
