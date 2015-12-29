@@ -30,7 +30,11 @@
 </p>
 <p>Linux can use the DD command: <b>dd bs=4M if=/path/to/iso of=/dev/sdx && sync</b>  Use the command <b>blkid</b> to find your sdx to use.  You will more than likely need to be root or sudo for both commands.
 </p>
-<p>MD5 Sum One should always check the md5sum of the ISO file to verify that the file you downloaded is a legit working copy. Download the iso file and the md5 file together in the same directory/folder. For linux, run the command in the directory you downloaded the files to: <br><b>md5sum -C Sabayon_Linux_Gforensic_DAILY_x86.iso.md5</b> (substitute name of course)
+<p align="center"><img src="/img/blkid.png">
+</p>
+<p>MD5 Sum One should always check the md5sum of the ISO file to verify that the file you downloaded is a legit working copy. Download the iso file and the md5 file together in the same directory/folder. For linux, run the command in the directory you downloaded the files to: <br><b>md5sum -c Sabayon_Linux_Gforensic_DAILY_x86.iso.md5</b> (substitute name of course)
+</p>
+<p align="center"><img src="/img/md5.png">
 </p>
 <p>For Windows you can download a free md5sum checker like <a href="http://www.winmd5.com/">WinMD5Free</a> and use that. Some software burning programs have a built in md5sum checker.
 </p>
