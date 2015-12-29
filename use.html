@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>Sabayon Forensics</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div id="wrap">
+<div id="header">
+<h1>Sabayon Forensics</h1>
+</div>
+<div id="container">
+<div id="sidebar">
+<div class="urbangreymenu">
+<h3 class="headerbar">Menu</h3>
+<ul>
+<li><a href="index.html">Main Page</a></li>
+<li><a href="iso.html">Obtaining ISO Image</a></li>
+<li><a href="start.html">Getting Started</a></li>
+<li><a href="use.html">Uses</a></li>
+
+</ul>
+</div>
+</div>
+<div id="main">
+
+<h1>chntpw</h1>
+<p>chntpw is a software utility for resetting or blanking local passwords used by Windows. The SAM file can be found at c:/Windows/System32/config or c:/Winnt/System32/config
+<br><br>
+chntpw -l SAM This will list all users in the SAM file<br>
+chntpw SAM This will automatically change the administrator account<br>
+chntpw -u USERNAME SAM This will change a specific username password
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce19.png"><img src="/img/forensicxfce19.png" width="400"></a></p>
+
+<h1>extundelete</h1>
+<p>extundelete is a utility that can recover deleted files from an ext3 or ext4 partition. example usage:
+<br>
+extundelete /dev/sda1 –restore-all
+</p>
+
+<h1>Clam AntiVirus</h1>
+<p>Clam AntiVirus is an open source (GPL) anti-virus toolkit for UNIX, designed especially for e-mail scanning on mail gateways. It provides a number of utilities including a flexible and scalable multi-threaded daemon, a command line scanner and advanced tool for automatic database updates.
+<br><br>
+To update the virus definitions, simple run as root: freshclam
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce14.png"><img src="/img/forensicxfce14.png" width="400"></a></p>
+<p>Other Usage with clamscan:
+<br><br>
+Scan a single file:<br>
+clamscan file
+<br><br>
+Scan a current working directory:<br>
+clamscan
+<br><br>
+Scan all files and subdirectories:<br>
+clamscan -r /directory
+<br><br>
+Scan all files and subdirectories, make a log of infected files, move infected to a location:<br>
+clamscan -ir /directory -l /var/log/clamscan.log -move=/tmp/virus</p>
+
+<h1>Rootkit Hunter</h1>
+<p>Rootkit Hunter (RKH) is an easy-to-use tool which checks computers running UNIX (clones) for the presence of rootkits and other unwanted tools.
+<br><br>
+To Update Definitions:<br>
+rkhunter --update
+<br><br>
+To Run:<br>
+rkhunter -c
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce17.png"><img src="/img/forensicxfce17.png" width="400"></a></p>
+
+<h1>Ophcrack</h1>
+<p>Ophcrack can be installed on the live system via the package manager. equo update && equo install ophcrack –nodeps I have choosen to leave ophcrack off the live for various reasons, maily due to the tables and their sizes. I suggest downloading the tables and storing them on usb sticks or dvd discs and than loading them with ophcrack.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce13.png"><img src="/img/forensicxfce13.png" width="400"></a></p>
+
+<h1>Xfburn</h1>
+<p>Xfburn is a simple CD/DVD burning tool based on libburnia libraries. It can blank CD/DVD(-RW)s, burn and create ISO images, audio CDs, as well as burn personal compositions of data to either CD or DVD.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce2.png"><img src="/img/forensicxfce2.png" width="400"></a></p>
+
+<h1>LibreOffice</h1>
+<p>LibreOffice is the leading open-source office software suite for word processing, spreadsheets, presentations, graphics, databases and more. Here you can see using nautilus for a file manager and LibreOffice to view documents.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce4.png"><img src="/img/forensicxfce4.png" width="400"></a></p>
+
+<h1>VLC</h1>
+<p>VLC is a powerful media player, playing most of the media codecs and video formats out there.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce7.png"><img src="/img/forensicxfce7.png" width="400"></a></p>
+
+<h1>Ristretto</h1>
+<p>Ristretto is a fast and lightweight picture-viewer for the Xfce desktop environment.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce8.png"><img src="/img/forensicxfce8.png" width="400"></a></p>
+
+<h1>PCManFM</h1>
+<p>An extremly fast, lightweight, yet feature-rich file manager with tabbed browsing. Here you can see nautilus is uploading to a webserver. All you need to do type into the urlbar is something like ftp://username@webserver.org and than it will prompt you for your password to access.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce9.png"><img src="/img/forensicxfce9.png" width="400"></a></p>
+<p>PCManFM Samba and Thunar File Manager PCManFM and Thunar have abilities to access windows networks via samba. You can see here I have PCManFM browsing the current network and thunar is viewing my home folder.</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce5.png"><img src="/img/forensicxfce5.png" width="400"></a></p>
+
+<h1>Google Chrome</h1>
+<p>Google Chrome runs web pages and applications with lightning speed. I choose to go with Google Chrome because I absolutely love the sync feature that is built in. No matter where I am at in the world, as long as I have internet access and google chrome, I can sync my browser so all my bookmarks and themes go where ever I go. This does require you to have set up your stuff before hand and a google account, otherwise it is hard to sync to anything.
+<br><br>
+By default you start up the browser and none of your bookmarks are there, so lets sync. Click the wrench and go to Preferences -- Personal Stuff tab and Setup Sync
+<br>
+Log into your google account
+<br>
+And now you can see, my stuff is all there. Can't stress enough how much easier this makes things.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce11.png"><img src="/img/forensicxfce11.png" width="400"></a></p>
+
+<h1>Autopsy Forensic Browser</h1>
+<p>The Autopsy Forensic Browser is a graphical interface to the command line digital investigation analysis tools in The Sleuth Kit. Together, they can analyze Windows and UNIX disks and file systems (NTFS, FAT, UFS1/2, Ext2/3). The Sleuth Kit and Autopsy are both Open Source and run on UNIX platforms (you can use Cygwin to run them both on Windows). As Autopsy is HTML-based, you can connect to the Autopsy server from any platform using an HTML browser. Autopsy provides a "File Manager" like interface and shows details about deleted data and file system structures.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/autopsy.png"><img src="/img/autopsy.png" width="400"></a></p>
+
+<h1>Wireshark</h1>
+<p>Wireshark is a free and open-source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education. Introduction to using wireshark.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce16.png"><img src="/img/forensicxfce16.png" width="400"></a></p>
+
+<h1>fcrackzip</h1>
+<p>fcrackzip is a zip password cracker, similar to fzc, zipcrack and others. If you run into a zip file that is password protected, this guy works pretty well. Here you can see I ran fcrack against a zip file and it found the password
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce18.png"><img src="/img/forensicxfce18.png" width="400"></a></p>
+
+<h1>John the Ripper</h1>
+<p>John the Ripper is a fast password cracker, currently available for many flavors of Unix, Windows, DOS, BeOS, and OpenVMS. Its primary purpose is to detect weak Unix passwords. Besides several crypt(3) password hash types most commonly found on various Unix systems, supported out of the box are Windows LM hashes, plus many more with contributed patches.
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce21.png"><img src="/img/forensicxfce21.png" width="400"></a></p>
+
+<h1>mlocate</h1>
+<p>mlocate is a new locate implementation. The m stands for "merging": updatedb reuses the existing database to avoid rereading most of the file system, which makes updatedb faster and does not trash the system caches as much. Here you can see after updatedb I searched for all jpg files with locate *.jpg
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce20.png"><img src="/img/forensicxfce20.png" width="400"></a></p>
+
+<h1>traceroute</h1>
+<p>Traceroute tracks the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol's time to live (TTL) field and attempts to elicit an ICMP TIME_EXCEEDED response from each gateway along the path to the host. See traceroute in the manual of your system for more info. * Can see here an IP traced to yahoo
+</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce22.png"><img src="/img/forensicxfce22.png" width="400"></a></p>
+<p>Can see here a trace of google and than using the IP found pulls up google</p>
+<p align="center">
+<a href="http://wolfden.github.io/img/forensicxfce23.png"><img src="/img/forensicxfce23.png" width="400"></a></p>
+
+</div>
+</div>
+</body>
+</html>
