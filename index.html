@@ -389,6 +389,14 @@ Password:<br>
 sabayon sabayonuser #<br>
 Note the #, this represent that you have successfully changed to root account.
 </p>
+<h2>Running Live & Package Manager</h2>
+<p>You can use the entropy package manager while running live.  You'll want to <b>equo update</b> to update the repo or repos if you add more repositories.
+<br><br>
+</p>
+<h2>Running Live & Portage</h2>
+<p>Sabayon Forensics can use binary and portage package managers.  You will not want to mess with portage with a live session.  If you install Sabayon Forensics than you can use portage.  It is best to stick with entropy package manager.
+<br><br>
+</p>
 <h2>
 Contacting Me
 </h2>
@@ -399,12 +407,12 @@ If you have an issue(s), suggestion(s) or question(s) on Sabayon Forensics, plea
 Hacking & Cracking
 </h2>
 <p>
-This applies to the general public. I will not teach or answer any emails asking how to crack/hack. Using the operating system and software for other means is not tolerated. Using the software in malicious behavior can and will get you into legal trouble. This is the first, last and final warning on that subject. 
+I will not teach or answer any emails asking how to crack/hack. Using the software in malicious behavior can and will get you into legal trouble.
 </p>
 <p>
 <h2>The Release Cycle</h2>
 <p>
-Currently it's being released once a week keep up with software updates. Do you need to download it every week? No of course not, update to a new version when ever you want. If you find one buggy, grab the next release to see if it works better.
+Currently it's being released once a week. Do you need to download it every week? No of course not, update to a new version when ever you want. If you find one buggy, grab the next release to see if it works better.
 </p>
 </p>
                  </div>
@@ -467,6 +475,7 @@ Currently it's being released once a week keep up with software updates. Do you 
 	                <!-- Collect the nav links, forms, and other content for toggling -->
 	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                  <ul class="nav navbar-nav navbar-right">
+						<li><a href="#entropy">entropy</a></li>
 	                    <li><a href="#chntpw">chntpw</a></li>
 	                    <li><a href="#extundelete">extundelete</a></li>
 	                    <li><a href="#clamav">Clam AV</a></li>
@@ -474,9 +483,9 @@ Currently it's being released once a week keep up with software updates. Do you 
                         <li><a href="#ophcrack">Ophcrack</a></li>
 	                    <li><a href="#fcrackzip">fcrackzip</a></li>
 	                    <li><a href="#jrip">John the Ripper</a></li>
-                        <li><a href="#mlocate">mlocate</a></li>
 	                  </ul><br>
                       <ul class="nav navbar-nav navbar-right">
+						<li><a href="#mlocate">mlocate</a></li>
                         <li><a href="#trace">Traceroute</a></li>
                         <li><a href="#wire">WireShark</a></li>
 	                    
@@ -503,7 +512,38 @@ Currently it's being released once a week keep up with software updates. Do you 
         </div>
         </div>
     </section>
+ <!--- entropy -->     
+    <section class="about_us_area" id="entropy">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="about_title">
+                        <h2>Entropy</h2>
+                        <img src="images/shape.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+                <p class="about_us_p"><h1>Entropy</h1></p>
+<p>Entropy is the binary package manager and can be used while running a live session of Sabayon Forensics.  It can be ran from the terminal with the equo command or with rigo the gui version.  I highly recommend using equo.
+<br><br>
+You will need to update the repository with <b>equo update</b> To see a list of commands <b>equo --help</b>
+<br><br>
+To install packages: <b>equo install foo</b>
+<br>
+To remove packages: <b>equo remove foo</b>
+<br>
+You can use the ask option to view deps before installing: <b>equo install foo --ask</b>
+<br><br>
+More indepth information can be found on the official <a href="https://wiki.sabayon.org/?title=En:Entropy">Sabayon Wiki</a>
+</p>
+<p align="center"><a href="#sfw"><img src="images/thumb.png"></a></p><hr>
 
+        </div>
+    </section>
+<!--- end --->
+<!--- chntpw --->
 <section class="about_us_area" id="chntpw">
         <div class="container">
             <div class="row">
@@ -528,6 +568,7 @@ chntpw -u USERNAME SAM This will change a specific username password
 <p align="center"><a href="#sfw"><img src="images/thumb.png"></a></p><hr>
                 </div>              
     </section>
+<!--- end --->
 <!--- extundelete -->     
     <section class="about_us_area" id="extundelete">
         <div class="container">
@@ -550,6 +591,7 @@ extundelete /dev/sda1 –restore-all
 
         </div>
     </section>
+<!--- end --->
 <!--- ClamAV -->
 <section class="about_us_area" id="clamav">
         <div class="container">
