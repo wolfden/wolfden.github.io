@@ -1,52 +1,484 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>Sabayon Forensics</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sabayon Forensics</title>
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
+    <!-- Font Awesome -->
+
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+     <!-- Preloader -->
+    <link rel="stylesheet" href="css/preloader.css" type="text/css" media="screen, print"/>
+
+    <!-- Icon Font-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <!-- Animate CSS-->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Style -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/lte-ie7.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
+
 <body>
-<div id="wrap">
-<div id="header">
-<h1>Sabayon Forensics</h1>
-</div>
-<div id="container">
-<div id="sidebar">
-<div class="urbangreymenu">
-<h3 class="headerbar">Menu</h3>
-<ul>
-<li><a href="index.html">Overview</a></li>
-<li><a href="iso.html">Obtaining ISO Image</a></li>
-<li><a href="start.html">Getting Started</a></li>
-<li><a href="use.html">Tools Part 1</a></li>
-<li><a href="use2.html">Tools Part 2</a></li>
-<li><a href="faq.html">FAQ</a></li>
+                <!-- Preloader -->
+                <div id="preloader">
+                    <div id="status">&nbsp;</div>
+                </div>
+    <header id="Home" style="background-position: 50% -125px;">
+	        <div class="section_overlay">
+	            <nav class="navbar navbar-default navbar-fixed-top">
+	              <div class="container">
+	                <!-- Brand and toggle get grouped for better mobile display -->
+	                <div class="navbar-header">
+	                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                  </button>
+	                  <a class="navbar-brand" href="#">Sabayon Forensics</a>
+	                </div>
 
-</ul>
-</div>
-</div>
-<div id="main">
+	                <!-- Collect the nav links, forms, and other content for toggling -->
+	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                  <ul class="nav navbar-nav navbar-right">
+	                    <li><a href="#Home">Home</a></li>
+	                    <li><a href="#SERVICE">Services</a></li>
+	                    <li><a href="#Purpose">Purpose</a></li>
+	                    <li><a href="#Desktop">Desktop</a></li>
+                        <li><a href="#Download">Download</a></li>
+	                    <li><a href="#WORK">Work</a></li>
+	                    <li><a href="#FAQ">FAQ</a></li>
+	                  </ul>
+	                </div><!-- /.navbar-collapse -->
+	              </div><!-- /.container -->
+	            </nav> 
 
-<h1>What It Is</h1>
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-md-12 text-center">
+	                        <div class="home_text wow fadeInUp animated">
+	                            <h2>Sabayon Forensics</h2>
+	                            <p>A Sabayon Linux Spin</p>
+	                            <img src="images/shape.png" alt="">                        
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
 
-<p>
-Sabayon Forensics is a Linux distribution that was custom made from Sabayon Linux. It uses the XFCE desktop environment. It runs as a Live operating system from a USB flash drive or from a DVD drive. Use the USB flash drive or DVD to boot a computer and have a full complete desktop environment to work in. It can also be installed to a computer.</p>
-<hr>
-<h1>Purpose</h1>
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-md-12 text-center">
+	                        <div class="scroll_down">
+                            <a href="#SERVICE"><img src="images/scroll.png" alt=""></a>
+	                            <h4>Scroll Down</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>            
+	        </div>  
+	    </section>         
+    </header>
+
+
+    <section class="services" id="SERVICE">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
+                        <i class="icon-pencil"></i>
+                        <h2>Gain Access</h2>
+                        <p>USB Drive to boot computers for access</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="single_service wow fadeInUp" data-wow-delay="2s">
+                        <i class="icon-magnifying-glass"></i>
+                        <h2>Disinfect</h2>
+                        <p>Scan and Clean infected computers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="single_service wow fadeInUp" data-wow-delay="3s">
+                        <img src="images/2.png">
+                        <h2>Networking</h2>
+                        <p>Networking tools and Communication</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="single_service wow fadeInUp" data-wow-delay="4s">
+                        <i class="icon-gears"></i>
+                        <h2>Complete Operating System</h2>
+                        <p>A fully usable and installable operating system</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section class="about_us_area" id="Purpose">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="about_title">
+                        <h2>Purpose</h2>
+                        <img src="images/shape.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+                <p class="about_us_p"><h1>Purpose</h1>
 <p>It is geared to gain access to a computer to scan and retrieve any and all information. It will allow you to do:</p>
 <ul>
 <li>various virus scans</li>
-<li>gain passwords – linux and windows</li>
+<li>gain passwords - linux and windows</li>
 <li>scan and view pictures</li>
 <li>view and play video media files</li>
 <li>access network</li>
 <li>copy and save material</li>
-<li>full internet access – ftp, browse, communication</li>
+<li>full internet access - ftp, browse, communication</li>
 <li>crack zip passwords</li>
 <li>various file searches</li>
 <li>retrieve deleted material</li>
+</ul></p>
+<p align="center"><img src="images/thumb.png"><p><hr>
+                </div>
+                </div>
+        </div>
+    </section>    
+
+    <section class="testimonial text-center wow fadeInUp animated" id="Desktop">
+        <div class="container">                       
+        </div>
+    </section>
+    <div class="fun_facts">
+    	<section class="header parallax home-parallax page" id="fun_facts" style="background-position: 50% -150px;">
+	        <div class="section_overlay">
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-md-6 wow fadeInLeft animated">
+	                        <div class="row">
+	                            <div class="col-md-4">
+	                                <div class="single_count">
+	                                    <img src="images/sabayon.png">
+	                                    <h3>Sabayon</h3>
+	                                    <p>Spin Project</p>
+	                                </div>
+	                            </div>
+	                            <div class="col-md-4">
+	                                <div class="single_count">
+	                                    <img src="images/gentoo.png">
+	                                    <h3>Gentoo</h3>
+	                                    <p>Based</p>
+	                                </div>                            
+	                            </div>
+	                            <div class="col-md-4">
+	                                <div class="single_count">
+	                                    <img src="images/xfce.png">
+	                                    <h3>XFCE</h3>
+	                                    <p>Desktop</p>
+	                                </div>                            
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-5 col-md-offset-1 wow fadeInRight animated">
+	                        <div class="imac">
+	                            <img src="images/imac.png" alt="">
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>            
+	        </div>
+	    </section>    
+    </div>
+        <section class="about_us_area" id="Download">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="about_title">
+                        <h2>Download</h2>
+                        <img src="images/shape.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+                <p class="about_us_p"><h1>Obtaining Sabayon Forensics ISO Image</h1>
+<p>You can find other mirrors on the official <a href="http://sabayon.org/mirrors">sabayon mirrors page</a>, just have to look in the daily folder to find the isos.
+<br><br>
+All Images are 64 bit
+<br><br>
+Brazil: Universidade Federal Do Paranà
+<ul>
+<li><a href="http://sabayon.c3sl.ufpr.br/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso">Sabayon Forensics XFCE 64bit</a></li>
+<li><a href="http://sabayon.c3sl.ufpr.br/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso.md5">md5</a></li>
 </ul>
 
-</div>
-</div>
+Czech Republic:
+<ul>
+<li><a href="http://ftp.sh.cvut.cz/MIRRORS/sabayon/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso">Sabayon Forensics XFCE 64bit</a></li>
+<li><a href="http://ftp.sh.cvut.cz/MIRRORS/sabayon/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso.md5">md5</a></li>
+</ul>
+
+Holland: NLUUG Open Systems, Open Standards
+<ul>
+<li><a href="http://ftp.nluug.nl/pub/os/Linux/distr/sabayonlinux/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso">Sabayon Forensics XFCE 64bit</a></li>
+<li><a href="http://ftp.nluug.nl/pub/os/Linux/distr/sabayonlinux/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso.md5">md5</a></li>
+</ul>
+
+Hungary: Free Software Network Hungary
+<ul>
+<li><a href="http://ftp.fsn.hu/pub/linux/distributions/sabayon/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso">Sabayon Forensics XFCE 64bit</a></li>
+<li><a href="http://ftp.fsn.hu/pub/linux/distributions/sabayon/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso.md5">md5</a></li>
+</ul>
+
+Italy Garr Consortium
+<ul>
+<li><a href="http://na.mirror.garr.it/mirrors/sabayonlinux/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso">Sabayon Forensics XFCE 64bit</a></li>
+<li><a href="http://na.mirror.garr.it/mirrors/sabayonlinux/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso.md5">md5</a></li>
+</ul>
+
+Portugal: Rede das Novas Licenciaturas – Instituto Superior Técnico
+<ul>
+<li><a href="http://ftp.rnl.ist.utl.pt/pub/sabayon/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso">Sabayon Forensics XFCE 64bit</a></li>
+<li><a href="http://ftp.rnl.ist.utl.pt/pub/sabayon/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso.md5">md5</a></li>
+</ul>
+
+USA: Cross-Lfs.org Mirror
+<ul>
+<li><a href="http://cross-lfs.sabayonlinux.org/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso">Sabayon Forensics XFCE 64bit</a></li>
+<li><a href="http://cross-lfs.sabayonlinux.org/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso.md5">md5</a></li>
+</ul>
+
+USA: Ibiblio Official Mirror
+<ul>
+<li><a href="http://distro.ibiblio.org/sabayonlinux/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso">Sabayon Forensics XFCE 64bit</a></li>
+<li><a href="http://distro.ibiblio.org/sabayonlinux/iso/daily/Sabayon_Linux_DAILY_amd64_ForensicsXfce.iso.md5">md5</a></li>
+</ul>
+</p>
+<p align="center"><img src="images/thumb.png"><p><hr>
+                </div>
+                </div>
+        </div>
+    </section>  
+    <section class="work_area" id="WORK">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="work_title  wow fadeInUp animated">
+                        <h1>Work</h1>
+                        <img src="images/shape.png" alt="">
+                        <p>Some of the Tools Available in Action</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 no_padding">
+                    <div class="single_image">
+                        <img src="images/w1.jpg" alt="">
+                        <div class="image_overlay">
+                            <h2>Autopsy</h2>
+                            <h4>The Slueth Kit</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 no_padding">
+                    <div class="single_image">
+                        <img src="images/w2.jpg" alt="">
+                        <div class="image_overlay">
+                            <h2>RootKit Hunter</h2>
+                            <h4>Check for rootkits</h4>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-md-4 no_padding">
+                    <div class="single_image">
+                        <img src="images/w3.jpg" alt="">
+                        <div class="image_overlay">
+                            <h2>WireShark</h2>
+                            <h4>Packet Analyzer</h4>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="row pad_top">
+                <div class="col-md-4 no_padding">
+                    <div class="single_image">
+                        <img src="images/w4.jpg" alt="">
+                        <div class="image_overlay">
+                            <h2>Clam AV</h2>
+                            <h4>Anti-Virus Toolkit</h4>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-md-4 no_padding">
+                    <div class="single_image">
+                        <img src="images/w5.jpg" alt="">
+                        <div class="image_overlay">
+                            <h2>chntpw</h2>
+                            <h4>Reset Windows Passwords</h4>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-md-4 no_padding">
+                    <div class="single_image last_padding">
+                        <img src="images/w6.jpg" alt="">
+                        <div class="image_overlay">
+                            <h2>Ristretto</h2>
+                            <h4>Picture-Viewer</h4>
+                        </div>                        
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </section><hr>
+    <section class="contact" id="FAQ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="contact_title  wow fadeInUp animated">
+                        <h1>FAQ</h1>
+                        <img src="images/shape.png" alt="">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-12  wow fadeInLeft animated">                
+<h2>Username & Passwords</h2>
+<p>There is two accounts, root account and sabayonuser account. There is no password for either account, so if you get asked for a password, just hit enter. For instance, when you need to su to the root account, you will get prompt for a password, just hit enter. So in terminal:
+<br><br>
+sabayonuser@sabayon ~ $ su<br>
+Password:<br>
+sabayon sabayonuser #<br>
+Note the #, this represent that you have successfully changed to root account.
+</p>
+<h2>
+Contacting Me
+</h2>
+<p>
+If you have an issue(s), suggestion(s) or question(s) on Sabayon Forensics, please feel free to contact me at wolfden@sabayon.org. I’m usually pretty good at responding quickly, weekends can be a bit slower as I like to get away from the computer too. Please make sure you are always running the latest release. Please provide as much information as possible and how to reproduce the issue(s).
+</p>
+<h2>
+Hacking & Cracking
+</h2>
+<p>
+This applies to the general public. I will not teach or answer any emails asking how to crack/hack. Using the operating system and software for other means is not tolerated. Using the software in malicious behavior can and will get you into legal trouble. This is the first, last and final warning on that subject. 
+</p>
+<p>
+<h2>The Release Cycle</h2>
+<p>
+Currently it's being released once a week keep up with software updates. Do you need to download it every week? No of course not, update to a new version when ever you want. If you find one buggy, grab the next release to see if it works better.
+</p>
+                    </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="work-with   wow fadeInUp animated">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="footer_logo   wow fadeInUp animated">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center   wow fadeInUp animated">
+                    <div class="social">
+                        <h2>Follow Me on Here</h2>
+                        <ul class="icon_list">
+                            <li><a href="https://www.facebook.com/kjs911"target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/911wolf"target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://plus.google.com/u/0/+KellySchwartz911"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/kellyschwartz"><i class="fa fa-linkedin"></i></a></li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="copyright_text   wow fadeInUp animated">
+                        <p>Thanks to <a href="http://www.themeforest.net/user/thecodecafe"target="_blank">Code Cafe Team</a> for the awesome template</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     SCRIPTS 
+============================== -->
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+    
+<!-- =========================
+Template Provided by
+BRANDY 2015.ALL RIGHT RESERVED BY CODE CAFE TEAM
+============================== -->
+
+
 </body>
+
 </html>
