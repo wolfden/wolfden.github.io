@@ -620,10 +620,14 @@
         <br> clamscan -r /directory
         <br>
         <br> Scan all files and subdirectories, make a log of infected files, move infected to a location:
-        <br> clamscan -ir /directory -l /var/log/clamscan.log -move=/tmp/virus</p>
-      <p align="center">
-        <a href="#sfw"><img src="images/thumb.png"></a>
-      </p>
+        <br> clamscan -ir /directory -l /var/log/clamscan.log -move=/tmp/virus
+        <br>
+        <br> If you run into a sock issue:
+        <br> # touch /var/lib/clamav/clamd.sock
+        <br> # chown clamav:clamav /var/lib/clamav/clamd.sock
+        <br></p>
+      <p align="center"><img src="/images/clamtk.png"></p>
+      <p align="center"><a href="#sfw"><img src="images/thumb.png"></a></p>
       <hr>
     </div>
   </section>
@@ -651,9 +655,8 @@
         <br> To Run:
         <br> rkhunter -c
       </p>
-      <p align="center">
-        <a href="#sfw"><img src="images/thumb.png"></a>
-      </p>
+      <p align="center"><img src="/images/rkhunter.png"></p>
+      <p align="center"><a href="#sfw"><img src="images/thumb.png"></a></p>
       <hr>
     </div>
   </section>
@@ -676,9 +679,8 @@
       <p>Ophcrack can be installed on the live system via the package manager. <b>equo update && equo install ophcrack –nodeps</b> I have choosen to leave ophcrack off the live for various reasons, mainly due to the tables and their sizes. I suggest downloading
         the tables and storing them on usb sticks or dvd discs and than loading them with ophcrack.
       </p>
-      <p align="center">
-        <a href="#sfw"><img src="images/thumb.png"></a>
-      </p>
+      <p align="center"><img src="/images/ophcrack.png"></p>
+      <p align="center"><a href="#sfw"><img src="images/thumb.png"></a></p>
       <hr>
     </div>
   </section>
