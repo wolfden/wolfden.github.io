@@ -74,6 +74,7 @@
               <li><a href="#WORK">Work</a></li>
               <li><a href="#FAQ">FAQ</a></li>
               <li><a href="#sfw">Wiki</a></li>
+              <li><a href="#byo">Build Your Own Spin</a></li>
             </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -921,6 +922,162 @@
     </div>
   </section>
   <!--- End -->
+  <header id="build" style="background-position: 50% -125px;">
+    <div class="section_overlay">
+      <section class="about_us_area" id="byo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="about_title">
+                <h2>Build Your Own Spin</h2>
+                <p>HowTo</p>
+                <img src="images/shape.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar navbar-default navbar-top-bottom">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">Build Your Own Spin</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#howto">HowTo</a></li>                
+              </ul>              
+            </div>
+          </div>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </div>
+  </section>
+</div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="work-with   wow fadeInUp animated">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+  <!--- howto -->
+  <section class="about_us_area" id="howto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="about_title">
+            <h2>Build Your Own Spin</h2>
+            <img src="images/shape.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p class="about_us_p">
+        <h1>HowTo</h1></p>
+      <p>So you want to build your own Sabayon spin.  Molecule makes this very easy to create custom spins.  This will be a brief example, adjust directions to fit your setup.</p>
+        <p>Make sure molecule is installed</p>
+        <li style="font-size: 17px; font-weight: bold">equo install dev-util/molecule</li>
+        <br>
+        <p>You need to decide how you want to setup your file structure.  I keep mine pretty simple, a spin folder on the /</p>
+        <li style="font-size: 17px; font-weight: bold">cd /</li>
+        <li style="font-size: 17px; font-weight: bold">mkdir -p /spin/final</li>
+        <li style="font-size: 17px; font-weight: bold">cd /spin</li>
+        <br>
+        <p>We need a iso to build from:</p>
+        <li style="font-size: 17px; font-weight: bold">wget ftp://ftp.nluug.nl/pub/os/Linux/distr/sabayonlinux/iso/daily/Sabayon_Linux_DAILY_amd64_Minimal-dev.iso</li>
+        <br>
+        <p>Now we need some files - a spec file for molecule to read and a few scripts.  I have an example build on my <a href="https://github.com/wolfden/Coding" target="_blank">github page to grab</a>.  The spec file is already setup to build a lxqt iso, so you should be able to figure it out by looking at the spec file.  You will want to grab: 
+        <div style="margin-left: 5em; font-weight: bold">
+            <ul class="list-unstyled">
+                <li style="font-size: 17px">lxqtspin.spec</li>
+                <li style="font-size: 17px">inner_chroot_script_after.sh</li>
+                <li style="font-size: 17px">remaster_post.sh</li>
+                <li style="font-size: 17px">remaster_pre.sh</li>
+           </ul>
+       </div>
+       </p>
+       <br>
+       <p>Once your have the 4 mentioned files in the /spin folder we need to make the scripts executable</p>
+       <li style="font-size: 17px; font-weight: bold">chmod +x *.sh</li>
+       <br>
+       <p>So now you should be set, you have an iso to build from, the spec, and scripts. Take a look at the lxqtspin.spec file as you will have to make some changes.</p>
+           <div style="margin-left: 5em; font-weight: bold">
+           line 12 - source_iso /change/this/path/to/point/to/your/iso you downloaded
+           <br><br>line 62 - packages_to_remove: put packages you want removed from the iso you downloaded, becareful as you may pull many other packages due to deps(This process runs after everything is downloaded and installed)
+           <br><br>line 68 - packages_to_add: add the packages you want</div>
+           <br><br><p>The options are pretty self explanatory if you just take the time to look it over carefully.</p>
+       <p>Lets go thru the scripts to see what they do</p>
+       <ul class="list-unstyled" style="margin-left: 5em;">
+       <li style="font-size: 17px"><b>remaster_pre.sh</b> - it sets up the cache. It will store the packages I add so I don't have to keep re-downloading them each time I want to make a spin.</li>
+       <li style="font-size: 17px"><b>remaster_post.sh</b> - works with the cache and you can pass changes along such if you have custom background, Example:</li>          
+          <li style="margin-left: 5em;">#!/bin/bash#!/bin/sh
+            <br>PKGS_DIR="/sabayon/remaster/pkgs"
+            <br>CHROOT_PKGS_DIR="${CHROOT_DIR}/var/lib/entropy/client/packages"
+            <br>echo "Merging back packages"
+            <br>cp "${CHROOT_PKGS_DIR}"/* "${PKGS_DIR}"/ -Ra
+            <br>rm -rf "${CHROOT_PKGS_DIR}"{,-nonfree,-restricted}/*
+            <br>cp /spin/background/sabayon-forensic.png "${CHROOT_DIR}/usr/share/backgrounds/sabayonlinux.png"
+            <br>cp /spin/background/sabayon-forensic.jpg "${CHROOT_DIR}/usr/share/backgrounds/sabayonlinux.jpg"
+            <br>is_64=$(file "${CHROOT_DIR}"/bin/bash | grep "x86-64")
+            <br>if [ -n "${is_64}" ]; then
+            <br>&nbsp&nbsp     echo "equo cleanup" | chroot "${CHROOT_DIR}"
+            <br> else
+            <br>&nbsp&nbsp    echo "equo cleanup" | linux32 chroot "${CHROOT_DIR}"
+            <br>fi</li><br>
+          </p>        
+       <li style="font-size: 17px"><b>inner_chroot_script_after.sh</b> - this kick ins after the build is done and you want to tweak or clean up things, Example:</li>           
+           <li style="margin-left: 5em;">#!/bin/bash
+                    <br>#fix clamav freshclam
+                    <br>touch /var/log/clamav/freshclam.log
+                    <br>chown clamav:clamav /var/log/clamav/freshclam.log
+                    <br>#remove desktop icons
+                    <br>rm /etc/skel/Desktop/*
+                    <br>#remove no longer needed folders/files
+                    <br>rm -r /etc/skel/.fluxbox
+                    <br>rm -r /etc/skel/.kde4
+                    <br>rm -r /etc/skel/.mozilla
+                    <br>rm -r /etc/skel/.emerald
+                    <br>rm -r /etc/skel/.xchat2
+                    <br>rm -r /etc/skel/.config/compiz
+                    <br>rm -r /etc/skel/.config/lxpanel
+                    <br>rm -r /etc/skel/.config/pcmanfm
+                    <br>rm -r /etc/skel/.config/Thunar
+                    <br>rm -r /etc/skel/.config/xfce4
+                    <br>rm -r /etc/skel/.gconf/apps/compiz
+                    <br>rm -r /etc/skel/.gconf/apps/gset-compiz
+                    <br>rm /etc/skel/.config/menus/applications-kmenuedit.menu
+                    <br>rm /etc/skel/.kderc
+                    <br>emaint --fix world</li></ul><br>
+           
+        <p>Using the scripts are optional, you don't need to use them if you aren't going to make changes.</p>
+        <p>To start the build process</p>
+            <li style="font-size: 17px; font-weight: bold">molecule lxqtspin.spec</li><br>
+        <p>Molecule will kick in and do it's thing and when it's done the iso will appear in the final folder we created earlier.</p>
+       <p align="center">
+        <img src="images/lxqtspin.png"></p>
+       <p>Results:</p>
+       <p align="center">
+        <a href="images/lxqt3.png"><img src="images/lxqt3.png" height="250" width="350"></a></p>       
+       <br><br>
+      <p align="center">
+        <a href="#byo"><img src="images/thumb.png"></a>
+      </p>
+    </div>
+  </section>
+  <!--- end --->  
   <!-- Begin Footer -->
   <footer>
     <div class="container">
