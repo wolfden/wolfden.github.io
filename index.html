@@ -950,8 +950,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#howto">HowTo</a></li>                
-              </ul>              
+                <li><a href="#howto">HowTo</a></li>
+              </ul>
             </div>
           </div>
         </nav>
@@ -999,7 +999,7 @@
         <p>We need a iso to build from:</p>
         <li style="font-size: 17px; font-weight: bold">wget ftp://ftp.nluug.nl/pub/os/Linux/distr/sabayonlinux/iso/daily/Sabayon_Linux_DAILY_amd64_Minimal-dev.iso</li>
         <br>
-        <p>Now we need some files - a spec file for molecule to read and a few scripts.  I have an example build on my <a href="https://github.com/wolfden/Coding" target="_blank">github page to grab</a>.  The spec file is already setup to build a lxqt iso, so you should be able to figure it out by looking at the spec file.  You will want to grab: 
+        <p>Now we need some files - a spec file for molecule to read and a few scripts.  I have an example build on my <a href="https://github.com/wolfden/Coding" target="_blank">github page to grab</a>.  The spec file is already setup to build a lxqt iso, so you should be able to figure it out by looking at the spec file.  You will want to grab:
         <div style="margin-left: 5em; font-weight: bold">
             <ul class="list-unstyled">
                 <li style="font-size: 17px">lxqtspin.spec</li>
@@ -1022,7 +1022,7 @@
        <p>Lets go thru the scripts to see what they do</p>
        <ul class="list-unstyled" style="margin-left: 5em;">
        <li style="font-size: 17px"><b>remaster_pre.sh</b> - it sets up the cache. It will store the packages I add so I don't have to keep re-downloading them each time I want to make a spin.</li>
-       <li style="font-size: 17px"><b>remaster_post.sh</b> - works with the cache and you can pass changes along such if you have custom background, Example:</li>          
+       <li style="font-size: 17px"><b>remaster_post.sh</b> - works with the cache and you can pass changes along such if you have custom background, Example:</li>
           <li style="margin-left: 5em;">#!/bin/bash#!/bin/sh
             <br>PKGS_DIR="/sabayon/remaster/pkgs"
             <br>CHROOT_PKGS_DIR="${CHROOT_DIR}/var/lib/entropy/client/packages"
@@ -1037,8 +1037,8 @@
             <br> else
             <br>&nbsp&nbsp    echo "equo cleanup" | linux32 chroot "${CHROOT_DIR}"
             <br>fi</li><br>
-          </p>        
-       <li style="font-size: 17px"><b>inner_chroot_script_after.sh</b> - this kick ins after the build is done and you want to tweak or clean up things, Example:</li>           
+          </p>
+       <li style="font-size: 17px"><b>inner_chroot_script_after.sh</b> - this kick ins after the build is done and you want to tweak or clean up things, Example:</li>
            <li style="margin-left: 5em;">#!/bin/bash
                     <br>#fix clamav freshclam
                     <br>touch /var/log/clamav/freshclam.log
@@ -1061,7 +1061,7 @@
                     <br>rm /etc/skel/.config/menus/applications-kmenuedit.menu
                     <br>rm /etc/skel/.kderc
                     <br>emaint --fix world</li></ul><br>
-           
+
         <p>Using the scripts are optional, you don't need to use them if you aren't going to make changes.</p>
         <p>To start the build process</p>
             <li style="font-size: 17px; font-weight: bold">molecule lxqtspin.spec</li><br>
@@ -1070,14 +1070,18 @@
         <img src="images/lxqtspin.png"></p>
        <p>Results:</p>
        <p align="center">
-        <a href="images/lxqt3.png"><img src="images/lxqt3.png" height="250" width="350"></a></p>       
+        <a href="images/lxqt3.png"><img src="images/lxqt3.png" height="250" width="350"></a></p>
+       <br><br>
+       <p align="center">
+        <a href="images/lxqt.png"><img src="images/lxqt.png" height="150" width="250"></a>&nbsp;<a href="images/lxqt2.png"><img src="images/lxqt2.png" height="150" width="250"></a>&nbsp;<a href="images/lxqt4.png"><img src="images/lxqt4.png" height="150" width="250"></a>&nbsp;<a href="images/lxqt5.png"><img src="images/lxqt5.png" height="150" width="250"></a>
+      </p>
        <br><br>
       <p align="center">
         <a href="#byo"><img src="images/thumb.png"></a>
       </p>
     </div>
   </section>
-  <!--- end --->  
+  <!--- end --->
   <!-- Begin Footer -->
   <footer>
     <div class="container">
